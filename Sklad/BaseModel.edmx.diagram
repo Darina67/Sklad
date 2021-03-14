@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="524abe11eab34e73a13b961559a5d361" Name="Diagram1">
+        <EntityTypeShape EntityType="SkladModel.Assortment" Width="1.5" PointX="2.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.Category" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.ordercomposition" Width="1.5" PointX="4.875" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.Order" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.orderstatu" Width="1.5" PointX="5.375" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.Role" Width="1.5" PointX="9.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkladModel.User" Width="1.5" PointX="10.375" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="SkladModel.FK_Assortment_Category1" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_ordercomposition_Assortment" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_Orders_ordercomposition" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_Orders_orderstatus" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="SkladModel.FK_Users_Role" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SkladModel.Manufacturer" Width="1.5" PointX="0.75" PointY="7.875" />
+        <AssociationConnector Association="SkladModel.FK_Assortment_Manufacturer" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,34 @@
+﻿<Page x:Class="Sklad.MakeOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sklad"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MakeOrderPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="310*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="176*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Товар в наличии ->" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" />
+        <ComboBox x:Name="ComboAssortment" Grid.Column="2" Grid.Row="1"  SelectedItem="{Binding Assortment}" DisplayMemberPath="Name" Height="25" ></ComboBox>
+        <TextBlock Text="Количество" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" ></TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Count}" ></TextBox>
+        <Button Grid.Column="2" Grid.Row="4" Content="Инф. о товаре" Name="InfoAssortment" Click="InfoAssortment_Click" ></Button>
+        <Button Content="Сделать заказ" Grid.Column="3" Grid.Row="6" Name="BtnAddOrder" Click="BtnAddOrder_Click"></Button>
+    </Grid>
+</Page>

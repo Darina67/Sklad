@@ -1,0 +1,34 @@
+﻿<Page x:Class="Sklad.SupplierPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sklad"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SupplierPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="135*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="173*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Поставщик" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Меню" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Content="Мои данные" Grid.Row="1" Width="auto" Name="BtnDataSupplier" Click="BtnDataSupplier_Click" Grid.Column="2"></Button>
+        <Button Content="Список товаров" Grid.Row="2" Width="auto" Name="BtnAssortment" Click="BtnAssortment_Click" Grid.Column="2"></Button>
+        <Button Content="Заказы" Grid.Row="3" Width="auto" Name="BtnOrders" Click="BtnOrders_Click" Grid.Column="2" ></Button>
+        <Button Content="Заказчики" Grid.Row="4"  Name="BtnCustomers" Click="BtnCustomers_Click"  Width="Auto" Grid.Column="2"></Button>
+    </Grid>
+</Page>

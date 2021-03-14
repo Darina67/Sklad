@@ -1,0 +1,61 @@
+﻿<Page x:Class="Sklad.DataSupplierPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sklad"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DataSupplierPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="168*"/>
+            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="152*"/>
+            <ColumnDefinition Width="98*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="126*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Личные данные" Grid.ColumnSpan="5" FontFamily="Sylfaen"/>
+        <TextBlock Text="Карточка пользователя" Grid.ColumnSpan="5" Grid.Row="1" FontFamily="Sylfaen"></TextBlock>
+        <Button Content="Редактировать" Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="2" Name="BtnEditSupplier" Click="BtnEditSupplier_Click"></Button>
+        <TextBlock Text="Ф.И.О" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Path=FIO}" x:Name="fiobox"></TextBox>
+
+        <TextBlock Text="Город" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding Path=City}" x:Name="citybox" ></TextBox>
+        <TextBlock Text="Адрес" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding Path=Adress}" x:Name="Adressbox"></TextBox>
+        <TextBlock Text="Телефон" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox Grid.Row="5" Grid.Column="2" Text="{Binding Path=Phone}" x:Name="Phonebox"></TextBox>
+        <TextBlock Text="Email" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox Grid.Row="6" Grid.Column="2" Text="{Binding Path=Email}" x:Name="Emailbox" ></TextBox>
+        <Button Name="BtnShowData" Click="BtnShowData_Click" Content="Показать" Grid.Column="1"></Button>
+
+        <Image Grid.Row="3" Grid.RowSpan="5">
+            <Image.Source>
+                <Binding Path="Photo">
+                    <Binding.TargetNullValue>
+                        <ImageSource>Resources/not_found.png</ImageSource>
+                    </Binding.TargetNullValue>
+                </Binding>
+            </Image.Source>
+        </Image>
+
+
+
+    </Grid>
+</Page>
